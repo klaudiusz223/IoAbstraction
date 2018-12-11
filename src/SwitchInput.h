@@ -28,7 +28,9 @@
  * If you want more (or less) buttons, change this definition below to the appropriate number.
  * Each button adds about 6 bytes of RAM, so on a tiny you could adjust downwards for example.
  */
+#ifndef MAX_KEYS
 #define MAX_KEYS 4
+#endif
 
 // END user adjustable section
 
