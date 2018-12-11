@@ -148,7 +148,7 @@ bool SwitchInput::runLoop() {
 		// get the pins current state
 		uint8_t pinState = ioDeviceDigitalRead(ioDevice, keys[i].getPin());
 		// if the switches are pull up, invert the state.
-		if(isPullupLogic()) {
+		if(isPullupLogic() && keys[i].getPin() >= 100) {
 			pinState = !pinState;
 		}
 		// and pass to the key handler.
